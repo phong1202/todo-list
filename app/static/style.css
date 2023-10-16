@@ -1,0 +1,37 @@
+* {
+    color: white;
+  
+}
+
+.background {
+    background-image: url(images/background.jpg);
+   
+}
+
+.task {
+    background-color: #e8c081;
+    border: #181e30 solid 1px;
+    border-radius: 5px;
+
+}
+
+.task-info {
+    font-size: 25px;
+    color: purple;
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow: auto;
+
+}
+
+.task-dl {
+    display: inline-block;
+    margin-right: 30px;
+    padding-top: 5%;
+    color: mediumpurple;
+
+}
+
+.task-btn {
+    margin-top: 10px;
+}
