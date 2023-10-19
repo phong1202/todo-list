@@ -18,8 +18,10 @@ def create_app(config=Config):
     # Routes
     @app.route('/', methods=['GET'])
     def home():
-        app.config['PERMANENT_SESSION_LIFETIME'] = str(app.config.get('PERMANENT_SESSION_LIFETIME'))
-        return jsonify(app.config)
+        app_config = app.config.copy()
+        app_config['PERMANENT_SESSION_LIFETIME'] = str(app.config.get('PERMANENT_SESSION_LIFETIME'))
+        return jsonify(app_config)
+    
     @app.errorhandler(404)
     def page_not_found(error):
         return render_template('404.html', error=404)
