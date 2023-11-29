@@ -1,19 +1,38 @@
 * {
     color: white;
-  
+}
+
+.my-container {
+    min-height: 95vh;
+}
+
+.flash-message {
+    padding: 10px;
 }
 
 .background {
     background-image: url(images/background.jpg);
-   
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+.domain-name {
+    font-size: 48px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+/* main */
 .task {
     background-color: #e8c081;
     border: #181e30 solid 1px;
     border-radius: 5px;
-
+    
 }
+
+
 
 .task-info {
     font-size: 25px;
@@ -34,4 +53,13 @@
 
 .task-btn {
     margin-top: 10px;
+}
+
+/* auth */
+.auth-form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 15px;
+    border: solid 2px #e8c081;
+    border-radius: 5%;
 }

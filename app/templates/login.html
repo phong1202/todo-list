@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="auth-form">  
+    <h2>Login</h2>
+    <br>
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.username.label(class='form-label') }}
+        {{ form.username(class='form-control') }}
+        {% if form.username.errors %}
+            <ul class="errors">
+                {% for error in form.username.errors %}
+                    <li class="list-unstyled">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+        {{ form.password.label(class='form-label') }}
+        {{ form.password(class='form-control') }}
+        {% if form.password.errors %}
+            <ul class="errors">
+                {% for error in form.password.errors %}
+                    <li class="list-unstyled">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+        {{ form.remember_me.label(class='form-check-label') }}
+        {{ form.remember_me(class='form-check-input') }}
+        {% if form.remember_me.errors %}
+            <ul class="errors">
+                {% for error in form.remember_me.errors %}
+                    <li class="list-unstyled">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+        {{ form.submit(class='btn btn-warning mt-3') }}
+        {% if form.submit.errors %}
+            <ul class="errors">
+                {% for error in form.submit.errors %}
+                    <li class="list-unstyled">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}    
+    </form>
+    <br>
+    <p class="text-light d-inline-block">Haven't had an account?</p>
+    <a class="text-light" href="{{ url_for('auth.signup') }}">Sign up</a>
+</div>  
+
+{% endblock %}
+
